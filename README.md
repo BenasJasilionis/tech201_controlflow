@@ -18,6 +18,8 @@ if age >= 18:
 ````
 * Here we see that the variable `age` is defined as 15
 * The `if` statement check if `age >= 18` and if so it prints the specified string
+* If the condition isn't met, nothing happens
+* **Note how everything in the `if` clause is indented to show that it is part of that clause**
 
 # ELIF and ELSE
-* `if` clauses can be expanded by adding `elif`
+* `if` clauses can be expanded by adding `elif` which add extra criteria to look through if the first criteria isnt met
