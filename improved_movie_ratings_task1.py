@@ -1,4 +1,3 @@
-
 age = input("What is your age?")
 if age.isdigit() and int(age) < 1 and int(age) > 117 :
     print("Please enter an age between 1 and 117")
