@@ -56,9 +56,39 @@ else:
 * A `for` loop is where you define an iterator number and then cycle through data (list or dictionary) 'for each entry in that data structure
 * For instance, if a list has 5 entries, 5 loops will be completed
 * With each iteration, the `for` loop can be instructed to carry out a task or print an output
-* `For` loops follow the following logic : `for each 
+* `For` loops follow the following logic : `for each "thing" in x data set, do y`
+
+An example can be seen below:
 ````
 list_data = [1, 2, 3, 4, 5, 6]
 
 for num in list_data:
     print(num * 2)
+````
+* `num` is just a placeholder, letting python know to go through every index in the list
+* Every time the loop is initiated, the `num` placeholder is assigned to the data at the next index in the selected list, and that data then goes through the clause
+* Best practice is to name the placeholder something relevant to the data to increase clarity
+* Placeholder must be a variable ,so it can be assigned to the new index value with each loop- it cannot be a data type
+1) In the first loop, `num` takes the value of index 0, which is 1. The next part of the program says to do `num * 2` or in other words `1 * 2` which outputs `2`
+2) In the second loop, `num` is now assigned the 1st index, which is 2, so the program runs `2 * 2` which is `4`
+3) This process carries on until the `for` loop runs out of indexes in the data set, so the final output will read : `2, 4, 6, 8, 10, 12`
+
+### For loops with nested lists
+* Data can be stored in more complex ways, such as lists within lists which are called nested lists.
+* To access the data within these lists, a nested `for` loop is needed
+* The first loop goes through each nested list within the list
+* The nested `for` loop goes one layer deeper, and goes through each data point within the nested lists
+````
+embedded_lists = [[1, 2, 3], [4, 5, 6]]
+
+for data in embedded_lists:
+    print(data)
+    for num in data:
+        print(num)
+````
+1) The first line instructs the program to go through every nested list within the big list called `embedded_lists`. We can see that there are two, which means that this `for` loop will run twice.
+2) In the second line, the program is told to print the data at index 0, this will output the first list `[1, 2, 3]`
+3) The third line initiates a nested `for` loop, which instructs the program to iterate through the data within the nested lists
+4) Because we are still in the first loop, the program will now iterate through the first nested list 3 times due to there being 3 items
+5) The final line tells the program to print an object after each iteration, and because there are 3 iterations, each covering a different index in the list, this will out put : `1, 2, 3` on separate lines
+6) The loop will go to the beginning now, and move on to the second nested list and do steps 2-5 on it, after which it will end.

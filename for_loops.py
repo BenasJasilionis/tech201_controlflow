@@ -27,12 +27,12 @@ dict_data = {1: {"name": "Bronson", "money": "$0.05"}, 2: {"name": "Masha", "mon
 
 # Loops for dictionaries
 # This prints the key for every dictionary : value is assigned to the different keys with each loop
-for value in dict_data:
-    print(value)
+# for value in dict_data:
+#     print(value)
 # With dictionaries, you can use methods to get data out
 
-for item in dict_data.values():
-    print(item)
+# for item in dict_data.values():
+#     print(item)
 
 # Nesting a for loop outputs the data in a nicer way
 # The first loop assigns each dictionary to the variable item
@@ -43,20 +43,20 @@ for item in dict_data.values():
 #     for embed_value in item.values():
 #         print(embed_value)
 #
-for items in dict_data.values():
-    print(items["money"])
+# for items in dict_data.values():
+#     print(items["money"])
 
 # Please see Python documentation for more you can do with dictionaries and loops
 
 
 # Loops and if statements
 
-list_1 = [1, 2, 3, 4, 5]
-
-for num in list_1:
-    if num == 3:
-        print("I found three")
-    elif num > 3:
-        print("Gone too far")
-    else:
-        print("Too soon")
+# list_1 = [1, 2, 3, 4, 5]
+#
+# for num in list_1:
+#     if num == 3:
+#         print("I found three")
+#     elif num > 3:
+#         print("Gone too far")
+#     else:
+#         print("Too soon")
