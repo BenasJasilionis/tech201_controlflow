@@ -92,3 +92,53 @@ for data in embedded_lists:
 4) Because we are still in the first loop, the program will now iterate through the first nested list 3 times due to there being 3 items
 5) The final line tells the program to print an object after each iteration, and because there are 3 iterations, each covering a different index in the list, this will out put : `1, 2, 3` on separate lines
 6) The loop will go to the beginning now, and move on to the second nested list and do steps 2-5 on it, after which it will end.
+
+**It is very important to take note of the indentation when embedding for loops**
+
+### For loops with dictionaries
+`For` loops can be used to get data out of dictionaries, and listed dictionaries in the same was as lists
+````
+dict_data = {1: {"name": "Bronson", "money": "$0.05"}, 2: {"name": "Masha", "money": "$3.66"}, 3: {"name": "Roscoe", "money": "$1.14"}}
+
+for value in dict_data:
+     print(value)
+````
+1) As discussed, `for` loops work from the outside in with each embedded loop, therefore running the code above will iterate through the big dictionary, returning the keys for the embedded dictionaries : `1, 2, 3
+````
+for item in dict_data.values():
+      print(item)
+````
+2) Dictionaries allow for the use of methods to get data out, for instance the `.values()` seen above will return the key value pairs for all the dictionaries, however the formatting is suboptimal
+````
+ for item in dict_data.values():
+     print(item)
+     for embed_value in item.values():
+         print(embed_value)
+````
+3) Here as before, the first 2 lines instruct the program to iterate through the big dictionary and print out the key value pairs found within the embedded dictionaries
+4) The embedded `for` loop tells the program to iterate through each embedded dictionary, and to print out only the values, not the key:value pairs
+````
+for items in dict_data.values():
+     print(items["money"])
+````
+5) We can also request values from specific keys.
+6) The first line iterates through all the key value pairs using the `,values()` method.
+7) The second line tells the program to print only the values for the key money with the syntax : `print(items["money"])`
+
+### For loops and if statements
+For loops and if statements can be combined for more complex programs. Below is a simple example:
+````
+list_1 = [1, 2, 3, 4, 5]
+
+for num in list_1:
+    if num == 3:
+        print("I found three")
+    elif num > 3:
+        print("Gone too far")
+    else:
+        print("Too soon")
+````
+1) The `num` tells the loop to iterate through the list `list_1` once for every item in the list, meaning there will be 5 iterations
+2) The first `if` clause tells the program to print `I found three` if the currently iterated value is `3`
+3) The `elif` clause tells the program to print `Gone too far` if the iterated number is a higher value then 3
+4) Finally, the else clause tells the program to print `Too soon`, and this will only happen if the iterated number is less than 3

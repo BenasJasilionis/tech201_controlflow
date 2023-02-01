@@ -26,13 +26,13 @@ dict_data = {1: {"name": "Bronson", "money": "$0.05"}, 2: {"name": "Masha", "mon
 #         print(num)
 
 # Loops for dictionaries
-# This prints the key for every dictionary : value is assigned to the different keys with each loop
+#This prints the key for every dictionary : value is assigned to the different keys with each loop
 # for value in dict_data:
 #     print(value)
 # With dictionaries, you can use methods to get data out
 
 # for item in dict_data.values():
-#     print(item)
+#      print(item)
 
 # Nesting a for loop outputs the data in a nicer way
 # The first loop assigns each dictionary to the variable item
