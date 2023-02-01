@@ -142,3 +142,39 @@ for num in list_1:
 2) The first `if` clause tells the program to print `I found three` if the currently iterated value is `3`
 3) The `elif` clause tells the program to print `Gone too far` if the iterated number is a higher value then 3
 4) Finally, the else clause tells the program to print `Too soon`, and this will only happen if the iterated number is less than 3
+
+# While loops
+* While loops monitor data rather than iterate, and while a certain condition is met, the loop will run
+* This can be thought of as the following `while x condition is met, do y`
+````
+x = 0
+
+ while x < 10: # comparison operator
+     print(f"it's working -> {x}")
+     x += 1 # incrementer
+````
+1) The first line in a `while` loop is a comparison operator, which lays out the condition to be met for the loop to run
+2) In this case, while `x < 10`, the loop will run
+3) The next line then has `print` instructions which will be run with each loop
+4) To prevent this from being an `infinite loop`, an `incremente` is required
+5) This is the third line of code which increases the value of `x` by `1` with every loop, so that eventually `x will not be < 10`, and the loop will end
+
+### Breaking while loops
+* Sometimes `while` loops are run to find a specific piece of data, and once that data is found the loop no longer needs to run
+* The loop cna be stopped early by suing `break`
+```` 
+x = 0
+
+while x < 10:
+    print(f"it's working -> {x}")
+    if x == 4:
+        break
+    x += 1
+````
+1) Here as before, the `while` loop will run as long as `x < 10`, with an `incrementer` at the end to prevent an infinite loop
+2) However, the `if` statement within the loop instructs the loop to `break` (stop) if `x = 4`
+3) Notice how the `break` statement is embedded in the `if` statement, while the `incrementer` is outside in the `while` loop
+4) If the `incrementer` was inside the `for` loop after the `break`, it would not be run , as the program could only reach it after `break` was run, but at that point the loop would end
+
+### Verify user input with while loops
+`While` loops and `Booleans` can be used together to verify user input to ensure that the user is providing relevant data 
